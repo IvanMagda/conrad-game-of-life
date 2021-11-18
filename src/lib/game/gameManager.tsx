@@ -16,7 +16,7 @@ const countNeighbours = (grid: number[][], i: number, j: number) => {
   return count;
 };
 
-const getCellStatus = (val: number, count: number) => {
+export const getCellStatus = (val: number, count: number) => {
   if (count === 3) return 1;
   if (count === 2) return val;
   return 0;

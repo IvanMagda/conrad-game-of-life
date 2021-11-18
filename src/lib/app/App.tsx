@@ -4,7 +4,7 @@ import { drawGrid } from "../game/grid/drawGrid";
 import { WIDTH, HEIGHT } from "../../appVariables";
 
 function App() {
-  const [grid, setGrid] = useState(setInitialGrid(WIDTH, HEIGHT));
+  const [grid, setGrid] = useState<number[][]>(setInitialGrid(WIDTH, HEIGHT));
   useEffect(() => {
     setTimeout(() => setGrid(getNextGrid(grid)), 400);
   });

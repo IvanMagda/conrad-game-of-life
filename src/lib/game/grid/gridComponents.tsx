@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { WIDTH, HEIGHT } from "../../../appVariables";
+import { memo } from "react";
 
 export const Grid = styled.div`
   display: grid;
@@ -13,10 +14,10 @@ interface CellProps {
   live: number;
 }
 
-export const Cell = styled.div<CellProps>`
+export const Cell = memo(styled.div<CellProps>`
   width: 1vh;
   height: 1vh;
   background: ${(props) => (props.live ? "#000" : "#fff")};
   text-align: center;
   border: #000 1px solid;
-`;
+`);
